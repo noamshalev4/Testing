@@ -29,4 +29,11 @@ class WordsCounterTest {
         wordsCounter.process("Shaked did not woke up at the time");
         assertEquals(8, wordsCounter.getCount());
     }
+
+    //שיניתי את הקוד בשביל לנסות לגרום לטסט הזה לעבוד ונתקעתי...
+    @Test
+    void duplicateAreNotAllowedTest() {
+        wordsCounter.process("Shaked did did not woke up at the time");
+        assertEquals(9, wordsCounter.getCount());
+    }
 }
